@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up page</title>
+    <link rel="stylesheet" href="sign_up.css">
+</head>
+<body>
+    <button onclick="location.href='/login/'" id="login_btn">Log In</button>
+    <center>
+           <h1>Sign Up</h1>
+              {% if error %}
+                <p style="color:red;">{{ error }}</p>
+              {% endif %}
+    </center>
+    <form method="POST" action="/">
+    <p>Name</p>
+    <input type="text" name="fname" placeholder="Input your first names">
+    <p></p>
+    <input type="text" name="lname" placeholder="Input your last name">
+    <p>Email</p>
+    <input type="email" name="sign_up_email" placeholder="Input your Email">
+    <p>Password</p>
+    <input type="password" name="sign_up_password" placeholder="Input your Password">
+    <p></p>
+    <input type="password" name="confirm_password" placeholder="Confirm Password">
+    <p>School</p>
+    <input type="text" name="school" placeholder="Input your School">
+    <p></p>
+    <button type="submit">Sign Up</button>
+    <div>
+    <p></p>
+        <p class="status" id="select_status" name="status">Select status</p>
+    <button class="status" value="Student" >Student</button>
+    <p></p>
+    <button class="status" value="Teacher">Teacher</button>
+    <p></p>
+    <button class="status" value="Guardian">Parent/Guardian</button>
+    </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,5 @@
+everytime you make a significant change to your project, you should commit your code to your repoistory.  
+the code to do this is a follows.
+git add .
+git commit -m "leave a message explaining the change"
+git push

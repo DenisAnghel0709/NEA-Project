@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(61, 163, 215);
+}
+.status{
+    grid-row: 10px;
+    grid-column: auto;
+}
+
+button.status{
+    height: 100px;
+    width: 200px;
+    border-style: solid;
+    border-color: rgb(61, 163, 215);
+    border-width: 10px;
+}

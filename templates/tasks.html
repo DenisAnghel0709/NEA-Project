@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks tab</title>
+    <link rel="stylesheet" static href="tasks.css">
+</head>
+<body>
+    <div>
+    <button class="tab" onclick="location.href='profile.html'" >Profile</button>
+    <button class="tab" onclick="location.href='settings.html'">Settings</button>
+    <button class="tab" onclick="location.href='calendar.html'">Calendar</button>
+    <button class="tab" onclick="location.href='classes.html'">Classes</button>
+    <button class="tab" onclick="location.href='tasks.html'">Tasks</button>
+    </div>
+    <button onclick="location.href='assign.html'">Assign</button>
+    <p>Sort by</p>
+    <form action="action_page.php">
+        <label for="subject">Select Classroom:</label>
+    <select name="class" id="class">
+            <option value="Select">Select</option>
+        <label for="subject">Select due date:</label>
+    </select>
+    <label for="subject">Due date:</label>
+    <select name="due_date" id="due_date">
+            <option value="Select">Select</option>
+            <option value="Due date">Earliest to latest</option>
+            <option value="Latest">Latest to earliest</option>
+    </select>
+    <label for="subject">Select task type:</label>
+    <select name="task_type" id="task_type">
+            <option value="Select">Select</option>
+            <option value="Homework">Homework</option>
+            <option value="Project">Project</option>
+            <option value="Other">Other</option>
+    </select>
+    </form>
+        
+        
+</body>
+</html>
