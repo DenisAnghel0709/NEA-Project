@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes tab</title>
+</head>
+<body>
+    <div>
+        <button onclick="location.href='/profile/'">Profile</button>
+        <button onclick="location.href='/settings/'">Settings</button>
+        <button onclick="location.href='/calendar/'">Calendar</button>
+        <button onclick="location.href='/view_classes/'">Classes</button>
+        <button onclick="location.href='/tasks/'">Tasks</button>
+    </div>
+
+    <button onclick="location.href='/create_class/'">Create Class</button>
+
+    <h2>Your Classes</h2>
+
+    {% if classes %}
+        {% for class in classes %}
+            <div>
+                <h3>{{ class.class_name }} - {{ class.subject }}</h3>
+                <p>Year Group: {{ class.year_group }}</p>
+                <p>Join Code: {{ class.join_code }}</p>
+            </div>
+            <hr>
+        {% endfor %}
+    {% else %}
+        <p>No classes have been created yet.</p>
+    {% endif %}
+
+</body>
+</html>

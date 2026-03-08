@@ -7,17 +7,28 @@
     <link rel="stylesheet" href="log_in.css">
 </head>
 <body>
+    <button onclick="location.href='/'" id="sign_up_button">Sign Up</button>
     <center>
-    <h1>Log in</h1>
-    <p>Log in with</p>
-    <p>Email</p>
-    <form>
-    <input type="email" name="log_in_email" placeholder="Input your Email">
-    <p>Password</p>
-    <input type="password" name="log_in_password" placeholder="Input your password">
-    <p></p>
-    <input type="submit" value="Log in">
-    </form>
+        <h1>Log in</h1>
+        {% if error %}
+            <p style="color:red;">{{ error }}</p>
+        {% endif %}
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p style="color:green;">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <p>Log in with</p>
+        <form method="POST" action="/login/">
+            <p>Email</p>
+            <input type="email" name="log_in_email" placeholder="Input your Email">
+            <p>Password</p>
+            <input type="password" name="log_in_password" placeholder="Input your password">
+            <p></p>
+            <input type="submit" value="Log in">
+        </form>
     </center>
 </body>
-</html> 
+</html>

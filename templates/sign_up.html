@@ -9,36 +9,41 @@
 <body>
     <button onclick="location.href='/login/'" id="login_btn">Log In</button>
     <center>
-           <h1>Sign Up</h1>
-              {% if error %}
-                <p style="color:red;">{{ error }}</p>
-              {% endif %}
+        <h1>Sign Up</h1>
+        {% if error %}
+            <p style="color:red;">{{ error }}</p>
+        {% endif %}
     </center>
     <form method="POST" action="/">
-    <p>Name</p>
-    <input type="text" name="fname" placeholder="Input your first names">
-    <p></p>
-    <input type="text" name="lname" placeholder="Input your last name">
-    <p>Email</p>
-    <input type="email" name="sign_up_email" placeholder="Input your Email">
-    <p>Password</p>
-    <input type="password" name="sign_up_password" placeholder="Input your Password">
-    <p></p>
-    <input type="password" name="confirm_password" placeholder="Confirm Password">
-    <p>School</p>
-    <input type="text" name="school" placeholder="Input your School">
-    <p></p>
-    <button type="submit">Sign Up</button>
-    <div>
-    <p></p>
-        <p class="status" id="select_status" name="status">Select status</p>
-    <button class="status" value="Student" >Student</button>
-    <p></p>
-    <button class="status" value="Teacher">Teacher</button>
-    <p></p>
-    <button class="status" value="Guardian">Parent/Guardian</button>
+        <p>Name</p>
+        <input type="text" name="fname" placeholder="Input your first names">
+        <p></p>
+        <input type="text" name="lname" placeholder="Input your last name">
+        
+        <p>Email</p>
+        <input type="email" name="sign_up_email" placeholder="Input your Email">
+        
+        <p>Password</p>
+        <input type="password" name="sign_up_password" placeholder="Input your Password">
+        <p></p>
+        <input type="password" name="confirm_password" placeholder="Confirm Password">
+        
+        <p>School</p>
+        <input type="text" name="school" placeholder="Input your School">
+        
+        <p>Status</p>
+        <label>
+            <input type="radio" name="status" value="Student"> Student
+        </label><br>
+        <label>
+            <input type="radio" name="status" value="Teacher"> Teacher
+        </label><br>
+        <label>
+            <input type="radio" name="status" value="Guardian"> Parent/Guardian
+        </label>
+        
+        <p></p>
+        <button type="submit">Sign Up</button>
     </form>
-    </div>
-    
 </body>
 </html>

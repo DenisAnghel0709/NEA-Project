@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Class</title>
+</head>
+<body>
+    <br>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    {% if message %}
+        <p style="color: green;">{{ message }}</p>
+    {% endif %}
+
+    <h2>Create a Class</h2>
+    <form action="/create_class/" method="POST">
+        <label>Class Name:</label><br>
+        <input type="text" name="class_name" placeholder="Enter class name"><br><br>
+
+        <label>Subject:</label><br>
+        <input type="text" name="subject" placeholder="Enter subject"><br><br>
+
+        <label>Year Group:</label><br>
+        <input type="text" name="year_group" placeholder="Enter year group (7-13)"><br><br>
+
+        <button type="submit">Create Class</button>
+    </form>
+    <button onclick="location.href='/view_classes/'">Back to Classes</button>
+
+</body>
+</html>
